@@ -19,7 +19,10 @@ namespace XamarinBackgroundingService.Droid
 
         public string GetTime()
         {
-            return DateTime.Now.ToString();
+            var time =  DateTime.Now.ToString();
+            AndroidNotificationManager manager = AndroidNotificationManager.Instance ?? new AndroidNotificationManager();
+            manager.SendNotification("New Email", time);
+            return time;
         }
 
 

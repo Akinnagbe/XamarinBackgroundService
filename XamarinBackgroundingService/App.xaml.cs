@@ -14,7 +14,7 @@ namespace XamarinBackgroundingService
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new SampleView();// new AppShell();
         }
 
         protected override void OnStart()
